@@ -9,7 +9,7 @@
     <input type="submit" value="submit">
 </form>-->
 
-<%= form_tag('/users') do %>
+<!--<%= form_tag('/users') do %>
  <%= label_tag 'username' %> 
  <%= text_field_tag 'username' %> 
  <%= label_tag 'email' %>
@@ -17,4 +17,13 @@
  <%= label_tag 'password' %> 
  <%= password_field_tag 'password' %> 
  <%= submit_tag 'submit' %> 
+<% end %>-->
+<%= form_for @user do |f| %>
+ <%= f.label :username %> 
+ <%= f.text_field :username %> 
+ <%= f.label :email %>
+ <%= f.email_field :email %> 
+ <%= f.label :password %> 
+ <%= f.password_field :password %> 
+ <%= f.submit :submit %> 
 <% end %>
