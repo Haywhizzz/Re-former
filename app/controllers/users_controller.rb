@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to new_user_path
     else
-      redirect_to users_path
+      render :new
     end
   end
 
